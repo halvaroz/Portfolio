@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta property="og:image" content="https://pierre-smolinski.yo.fr/img/fieldd.png" />
+		<meta name="description" content="Pierre SMOLINSKI, développeur intégrateur en réalisation d'applications Web à Nantes. Actuellement en recherche d'emploi." />
+		<meta name="Language" CONTENT="fr" />
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<!-- build:css csstyle/min.css -->
+		<link rel="stylesheet" href="csstyle/normalize.css">
+		<link rel="stylesheet" href="csstyle/game.css">
+		<link rel="stylesheet" href="csstyle/footer.css">
+		<link rel="stylesheet" href="csstyle/style.css">
+		<link rel="stylesheet" href="csstyle/about-link.css">
+
+		<link rel="stylesheet"  href="folder-css/demo.css" />
+		<link rel="stylesheet"  href="works-css/work-style.css" />
+		<link rel="stylesheet"  href="instru-css/kalimba.css" />
+		<!-- endbuild -->
+		<script>
+			/*document.documentElement.className = 'js';*/
+			function browserCanUseCssVariables() { return window.CSS && window.CSS.supports && window.CSS.supports('--fake-var', 0); }
+			if (!browserCanUseCssVariables()) alert('Your browser does not support CSS Variables. Please use a modern browser to view this demo.');
+		</script>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/helium-css/1.1/helium.js"></script>
+		<title>Mon portfolio</title>
+		<style>
+		</style>
+	</head>
+<body>
+	<svg class="hidden">
+			<symbol id="icon-folderback" viewBox="0 0 20 16">
+				<title>folder-back</title>
+				<path d="M7.5,0C7.4,0,2,0,2,0C0.9,0,0,0.9,0,2l0,12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4c0-1.1-0.9-2-2-2c0,0-7.5,0-8,0C9,2,9.9,0,7.5,0z"/>
+			</symbol>
+			<symbol id="icon-foldercover" viewBox="0 0 20 16">
+				<title>folder-cover</title>
+				<path d="M2,2h16c1.1,0,2,0.9,2,2v10c0,1.1-0.9,2-2,2H2c-1.1,0-2-0.9-2-2V4C0,2.9,0.9,2,2,2z"/>
+			</symbol>
+			<symbol id="icon-folderdummy" viewBox="0 0 20 16">
+				<title>folder-dummy</title>
+				<path d="M7.5,0C7.4,0,2,0,2,0C0.9,0,0,0.9,0,2l0,12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4c0-1.1-0.9-2-2-2c0,0-7.5,0-8,0C9,2,9.9,0,7.5,0z"/><path d="M2,2h16c1.1,0,2,0.9,2,2v10c0,1.1-0.9,2-2,2H2c-1.1,0-2-0.9-2-2V4C0,2.9,0.9,2,2,2z"/>
+			</symbol>
+			<symbol id="icon-cloud" viewBox="0 0 24 22.2">
+				<title>cloud</title>
+				<path d="M19.5,5.8c-0.3-1.5-1-2.9-2.2-4c-1.3-1.2-3-1.8-4.7-1.8C11.3,0,10,0.4,8.9,1.1C8,1.7,7.2,2.5,6.6,3.5c-0.2,0-0.5-0.1-0.7-0.1c-2.1,0-3.8,1.7-3.8,3.8c0,0.3,0,0.5,0.1,0.8C0.8,9,0,10.6,0,12.3C0,13.6,0.5,15,1.4,16c1,1.1,2.2,1.7,3.6,1.8c0,0,0,0,0,0h4.2c0.4,0,0.7-0.3,0.7-0.7s-0.3-0.7-0.7-0.7H5c-2-0.1-3.7-2-3.7-4.2c0-1.4,0.8-2.7,2-3.4c0.3-0.2,0.4-0.5,0.3-0.8C3.5,7.8,3.4,7.5,3.4,7.2c0-1.4,1.1-2.5,2.5-2.5c0.3,0,0.6,0,0.8,0.1c0.3,0.1,0.7,0,0.8-0.3c0.9-2,2.9-3.2,5.1-3.2c2.9,0,5.3,2.2,5.6,5.1c0,0.3,0.3,0.5,0.6,0.6c2.2,0.4,3.9,2.4,3.9,4.7c0,2.5-1.9,4.6-4.3,4.8h-3.6c-0.4,0-0.7,0.3-0.7,0.7s0.3,0.7,0.7,0.7h3.7c0,0,0,0,0,0c1.5-0.1,2.9-0.8,4-2c1-1.1,1.6-2.6,1.6-4.1C24,8.9,22.1,6.5,19.5,5.8z M16,12.9c0.3-0.3,0.3-0.7,0-0.9l-3.5-3.5c-0.1-0.1-0.3-0.2-0.5-0.2c-0.2,0-0.3,0.1-0.5,0.2L8,12c-0.3,0.3-0.3,0.7,0,0.9c0.1,0.1,0.3,0.2,0.5,0.2c0.2,0,0.3-0.1,0.5-0.2l2.4-2.4v11c0,0.4,0.3,0.7,0.7,0.7s0.7-0.3,0.7-0.7v-11l2.4,2.4C15.3,13.2,15.7,13.2,16,12.9z"/>
+			</symbol>
+		</svg>
+	<header>
+		<nav class="menu flex" id="flexnav">
+			<button id="sound">
+				<img src="img/audio-off.png" alt="" />
+			</button>
+			<a href="#about" class="anchors">
+				<div id="uno" class="iconav"></div>
+				<span class="header">Présentation</span>
+			</a>
+			<a href="#competences"  class="anchors">
+				<div id="tres" class="iconav"></div>
+				<span class="header">Compétences</span>
+			</a>
+			<a href="index.php" id="identity">
+				<div>
+					<h1 class="tert" id="uns">halvaro</h1>
+					<h2 class="tert" id="deus">πR</h2>
+				</div>
+			</a>
+			<a href="#projects"  class="anchors">
+				<div id="dos" class="iconav"></div>
+				<span class="header">Réalisations</span>
+			</a>
+			<a href="#contact" class="anchors" >
+				<div id="quatro" class="iconav"></div>
+				<span class="header">Contact</span>
+			</a>
+		</nav>
+	</header>
+	<main>
+		<div class="container">
+			<section class="a_content content--instrument content--instrument-alt content--kalimba content--cursor-dark flexy">
+				<div class="content__inner content__inner--medium flexy flexy--center">
+					<h2 class="a_content__title">Préambule</h2>
+					<p class="content__subtitle"><p>Bonjour, je suis actuellement à la recherche d'un emploi en tant que développeur web. J'ai pu acquérir un premier socle de connaissances par l'intermédiaire d'une formation de la <a href="https://3wa.fr/" class="textlinks" target="_blank" rel="noreferrer" title="Site de la 3WA">3W Academy</a>. Ceci au cours de la première moitié de l'année 2018.</p>
+				<p>Vous trouverez ci-dessous une partie des travaux que j'ai réalisés. Disponible dès maintenant, vous pouvez me contacter via la rubrique <a class="textlinks" title="Section Contact" href="#contact">Contact</a> en bas de la page.</p>
+				</div>
+				<div class="kalimba instrument">
+					<svg class="kalimba__inner" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMin meet">
+						<path note:id="51" class="kalimba__tine" d="M217.4,438.8c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V438.8z"/>
+						<path note:id="48" class="kalimba__tine" d="M350.5,503c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V503z"/>
+						<path note:id="44" class="kalimba__tine" d="M483.2,567.2c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V567.2z"/>
+						<path note:id="41" class="kalimba__tine" d="M616.4,631.5c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V631.5z"/>
+						<path note:id="39" class="kalimba__tine" d="M749.1,681.1c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V681.1z"/>
+						<path note:id="43" class="kalimba__tine" d="M882.6,590.4c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V590.4z"/>
+						<path note:id="46" class="kalimba__tine" d="M1015.4,517.3c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V517.3z"/>
+						<path note:id="50" class="kalimba__tine" d="M1148.5,462c0,17.7,16.7,32.1,37.1,32.1c20.4,0,37.1-14.5,37.1-32.1V0h-74.2V462z"/>
+					</svg>
+				</div>
+				<div class="interaction interaction--corner"></div>
+			</section>
+     		<section class="content content--durga" id="competences">
+				<div class="grid">
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item">
+						<div class="folder folder--durga">
+							<div class="folder__icon folder__icon--perspective">
+								<div class="folder__icon-img folder__icon-img--back">
+									<svg class="folder__icon-svg"><use xlink:href="#icon-folderback"></use></svg>
+								</div>
+								<div class="folder__icon-deco"></div>
+								<div class="folder__preview folder__preview--text">
+									<p class="folder__detail">HTML</p>
+									<p class="folder__detail">CSS</p>
+									<p class="folder__detail">Javascript</p>
+									<p class="folder__detail">PHP</p>
+									<p class="folder__detail">MySQL</p>
+									<p class="folder__detail">Responsive Web Design</p>
+									<p class="folder__detail">jQuery</p>
+									<p class="folder__detail">Bootstrap</p>
+								</div>
+								<div class="folder__icon-img folder__icon-img--cover">
+									<svg class="folder__icon-svg"><use xlink:href="#icon-foldercover"></use></svg>
+									<svg class="folder__icon-svg folder__icon-svg--deco"><use xlink:href="#icon-cloud"></use></svg>
+								</div>
+							</div>
+							<h3 class="folder__caption">je_maitrise</h3>
+						</div>
+					</div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item">
+						<div class="folder folder--durga">
+							<div class="folder__icon folder__icon--perspective">
+								<div class="folder__icon-img folder__icon-img--back">
+									<svg class="folder__icon-svg"><use xlink:href="#icon-folderback"></use></svg>
+								</div>
+								<div class="folder__icon-deco"></div>
+								<div class="folder__preview folder__preview--text">
+									<p class="folder__detail">APIs</p>
+									<p class="folder__detail">Node.js</p>
+									<p class="folder__detail">Express.js</p>
+									<p class="folder__detail">MongoDB</p>
+									<p class="folder__detail">Gulp</p>
+									<p class="folder__detail">Github</p>
+								</div>
+								<div class="folder__icon-img folder__icon-img--cover">
+									<svg class="folder__icon-svg"><use xlink:href="#icon-foldercover"></use></svg>
+									<svg class="folder__icon-svg folder__icon-svg--deco"><use xlink:href="#icon-cloud"></use></svg>
+								</div>
+							</div>
+							<h3 class="folder__caption">en_decouverte</h3>
+						</div>
+					</div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+				</div>
+			</section>
+			<section class="works" id="projects">
+				<h2 class="entete">Réalisations</h2>
+				<div class="cntr"><img class='left-icon' src="img/log.png" alt="" /><p>Une partie des travaux sur lesquels j'ai bûché et planché.</p><img class='right-icon' src="img/board.png" alt="" /></div>
+				<div class="whole-container">
+					<div class="pf-container">
+						<div class="portfolio" id="js-portfolio">
+							<article class="card project js-item" tabindex="0">
+				 			<header class="card__thumb">
+								<a href="#"><img src="img/real/teams.png"></a>
+							</header>
+					<!-- <div class="card__date">
+					    <span class="card__date__day">12</span>
+					    <span class="card__date__month">Mai</span>
+					</div> -->
+							<div class="card__body">
+							    <div class="card__category"><a href="#">Site</a></div>
+							    <h2 class="card__title"><a href="#">Site sur les équipes sportives nantaises</a></h2>
+							    <div class="card__subtitle">API, MySQL, Vanilla JS ...</div>
+							    <p class="card__description">
+							    	Carte interactive - API OpenStreetMap<br>
+							      	Interface administrateur édition/suppression des équipes et des matches<br>
+							      	Pagination d'un calendrier des matches<br>
+								 </p>
+					  		</div>
+					  	<div class="card__footer">
+					    <span class="icon icon--time"></span>Septembre 2018
+					    <span class="icon icon--comment"></span><button>DEMO</button>
+					  	</div>
+				</article>
+				<article class="card project js-item">
+				 	<header class="card__thumb">
+						<a href="#lettermind"><img src="img/real/mastermind.png" alt="Illustration du jeu - Mastermind littéraire"></a>
+					</header>
+					<!--<div class="card__date">
+					     <span class="card__date__day">12</span>
+					    <span class="card__date__month">Mai</span> 
+					</div>-->
+					<div class="card__body">
+					    <div class="card__category"><a href="#">Jeu</a></div>
+					    <h2 class="card__title"><a href="#">Mastermind littéraire</a></h2>
+					    <div class="card__subtitle">jQuery, PHP, MySQL</div>
+					    <p class="card__description">
+					      Interaction avec une douzaine de boutons<br>
+					      Ajout, affichage, pagination des scores<br>
+					      Ajout, affichage, pagination des commentaires<br>
+					      <a href="#lettermind"  class="anchors">DEMO</a>
+					    </p>
+					  </div>
+					  <div class="card__footer">
+					    <span class="icon icon--time"></span>Août 2018
+					    <!-- <span class="icon icon--comment"></span><a href="#">39 comments</a> -->
+					  	</div> 
+				</article>
+				<article class="card project js-item">
+				 	<header class="card__thumb">
+						<a href="https://pierre-smolinski.yo.fr/"><img src="img/real/old.png" alt="Illustration de la première version de ce site"></a>
+					</header>
+					<!-- <div class="card__date">
+					    <span class="card__date__day">12</span>
+					    <span class="card__date__month">Mai</span>
+					</div> -->
+					<div class="card__body">
+					    <div class="card__category"><!-- <a href="#"> -->Site<!-- </a> --></div>
+					    <h2 class="card__title"><!-- <a href="https://pierre-smolinski.yo.fr/"> -->Première version de ce site<!-- </a> --></h2>
+					    <div class="card__subtitle">HTML, CSS, javaScript, jQuery, PHP, MySQL</div>
+					    <p class="card__description">
+					      Réalisé dans le cadre de la validation du diplôme "Développeur intégrateur en réalisation d'applications web" délivré par la <a  href="https://3wa.fr/" class="textlinks" target="_blank" rel="noreferrer" title="Site de la 3WA">3W Academy</a>
+						</p>
+					  </div>
+					  <div class="card__footer">
+					    <span class="icon icon--time"></span>Août 2018
+					    <span class="icon icon--comment"></span><a class="demos" href="https://pierre-smolinski.yo.fr/" target="_blank" rel="noreferrer" title="Première version de ce portfolio">Try it Yourself >></a>
+					  					</div> 
+				</article>
+				<article class="card project js-item">
+				 	<header class="card__thumb">
+						<a href="#"><img src="https://via.placeholder.com/350x150"></a>
+					</header>
+					<div class="card__date">
+					    <span class="card__date__day">12</span>
+					    <span class="card__date__month">Mai</span>
+					</div>
+					<div class="card__body">
+					    <div class="card__category"><a href="#">Photos</a></div>
+					    <h2 class="card__title"><a href="#">Bender Should Not Be Allowed on TV</a></h2>
+					    <div class="card__subtitle">A Head in the Polls</div>
+					    <p class="card__description">
+					      With a warning label this big, you know they gotta be fun! This is the worst part. The calm before the battle. No! The cat shelter's on to me. Yes, I saw. You were doing well, until everyone died. Daylight and everything.
+					    </p>
+					  </div>
+					  <!-- <div class="card__footer">
+					    <span class="icon icon--time"></span>6 min
+					    <span class="icon icon--comment"></span><a href="#">39 comments</a>
+					  					</div> -->
+				</article>
+				<article class="card project js-item">
+				 	<header class="card__thumb">
+						<a href="#"><img src="https://via.placeholder.com/350x150"></a>
+					</header>
+					<div class="card__date">
+					    <span class="card__date__day">12</span>
+					    <span class="card__date__month">Mai</span>
+					</div>
+					<div class="card__body">
+					    <div class="card__category"><a href="#">Photos</a></div>
+					    <h2 class="card__title"><a href="#">Bender Should Not Be Allowed on TV</a></h2>
+					    <div class="card__subtitle">A Head in the Polls</div>
+					    <p class="card__description">
+					      With a warning label this big, you know they gotta be fun! This is the worst part. The calm before the battle. No! The cat shelter's on to me. Yes, I saw. You were doing well, until everyone died. Daylight and everything.
+					    </p>
+					  </div>
+					  <!-- <div class="card__footer">
+					    <span class="icon icon--time"></span>6 min
+					    <span class="icon icon--comment"></span><a href="#">39 comments</a>
+					  					</div> -->
+				</article>
+				<article class="card project js-item">
+				 	<header class="card__thumb">
+						<a href="#"><img src="https://via.placeholder.com/350x150"></a>
+					</header>
+					<div class="card__date">
+					    <span class="card__date__day">12</span>
+					    <span class="card__date__month">Mai</span>
+					</div>
+					<div class="card__body">
+					    <div class="card__category"><a href="#">Photos</a></div>
+					    <h2 class="card__title"><a href="#">Bender Should Not Be Allowed on TV</a></h2>
+					    <div class="card__subtitle">A Head in the Polls</div>
+					    <p class="card__description">
+					      With a warning label this big, you know they gotta be fun! This is the worst part. The calm before the battle. No! The cat shelter's on to me. Yes, I saw. You were doing well, until everyone died. Daylight and everything.
+					    </p>
+					  </div>
+					  <!-- <div class="card__footer">
+					    <span class="icon icon--time"></span>6 min
+					    <span class="icon icon--comment"></span><a href="#">39 comments</a>
+					  					</div> -->
+				</article>
+				<article class="card project js-item">
+				 	<header class="card__thumb">
+						<a href="#"><img src="https://via.placeholder.com/350x150"></a>
+					</header>
+					<div class="card__date">
+					    <span class="card__date__day">12</span>
+					    <span class="card__date__month">Mai</span>
+					</div>
+					<div class="card__body">
+					    <div class="card__category"><a href="#">Photos</a></div>
+					    <h2 class="card__title"><a href="#">Bender Should Not Be Allowed on TV</a></h2>
+					    <div class="card__subtitle">A Head in the Polls</div>
+					    <p class="card__description">
+					      With a warning label this big, you know they gotta be fun! This is the worst part. The calm before the battle. No! The cat shelter's on to me. Yes, I saw. You were doing well, until everyone died. Daylight and everything.
+					    </p>
+					  </div>
+					  <!-- <div class="card__footer">
+					    <span class="icon icon--time"></span>6 min
+					    <span class="icon icon--comment"></span><a href="#">39 comments</a>
+					  					</div> -->
+				</article>
+				</div></div></div>
+			</section>
+			<section  class="section" id="lettermind">
+				<div id="effect2" class="voile">
+					<h2 class="game-header">Lettermind</h2>
+				</div>
+				<div id="power" class="off">
+					<button class="activebutton" id="light" aria-hidden="true">
+					</button>
+					<div id="rustine" class="shadow"></div>
+				</div>
+				<div id="effect" class="voile">
+					<div class="whole">
+						<div class='center'>
+							<div class="level">
+								<button class="inactivebutton" id="lvlchange" disabled aria-hidden="true">
+								</button>
+								<p id="lvl" class="bg-white green">Niveau I</p>
+							</div>
+							<div class="pregame">
+								<p id='play'>
+									<button class="inactivebutton gamebutton" id="start" disabled aria-hidden="true"></button>
+								</p>
+								<button class="inactivebutton" id="instructions" disabled aria-hidden="true">
+								</button>
+								<button class="inactivebutton" id="topscores" onclick="openscore();event.preventDefault();" disabled aria-hidden="true"></button>
+								<button class="inactivebutton" id="infos" disabled aria-hidden="true"></button>
+								<button class="inactivebutton" id="statistics" disabled aria-hidden="true"></button>		
+							</div>							
+							<div class="how">
+								<ul>
+									<li>
+										<img src="img/pinblack.png" alt="Icone lettre bien placée" /> pour chaque lettre bien placée.
+									</li>
+									<li>
+										<img src="img/pinwhite.png" alt="Icone lettre bien placée" /> pour chaque lettre mal placée.
+									</li>
+									<li>Les mots autorisés sont ceux du Scrabble® (conjugaisons permises).</li>
+									<li>Le nombre de solutions possibles varie selon le niveau (voir infos).</li>
+									<li>La casse (minuscule/majuscule) est sans importance.</li>
+									<li>Les accents sont sans importance.</li>
+								</ul>
+							</div>
+							<div class="further">
+								<p class="bg-white">En mode <span class="red">difficile</span>, c'est parmi 7823 mots que peut se trouver la solution. Soit tout ceux autorisés au Scrabble®.<br/>Cette liste comporte 33 palindromes !</p>
+								<p class="bg-white">En mode <span class="yellow">intermédiaire</span>, la solution est parmi 2799 mots.</p>
+								<p class="bg-white">En mode <span class="green">facile</span>, la solution est parmi 1387 mots. Pas de conjugaison sauf infinitifs.</p>
+							</div>
+							<div id="stats" class="bg-white"></div>
+						</div>
+						<hr>
+						<div class='flex'>
+							<?php $attempts = array('first','second','third', 'fourth','fifth', 'sixth','seventh', 'eighth','ninth', 'tenth' , 'eleventh', 'twelfth');
+							for($i = 1; $i < 13; $i++) : ?> 
+								<?php if(($i==1) ||($i==7)): ?>
+									<div class="half">
+								<?php endif ?>
+									<div class="<?=$i?> gameline" >
+										<label for="<?=$attempts[$i-1]?>"><?=$i?>.</label>
+										<input type="text" class="tentries <?=$attempts[$i-1]?>"  disabled>
+										<button class="game details" disabled id="<?=$attempts[$i-1]?>" value="Essai">
+											<img src="img/checkedb.svg" alt="Icone de validation d'une réponse"/>
+										</button>
+										<p class="result" id="<?=$attempts[$i-1]?>try" aria-hidden="true"></p>
+									</div>
+									<?php if(($i==6) ||($i==13)): ?>
+										</div>
+									<?php endif ?>
+							<?php  endfor ?>
+						</div>
+					</div>
+					<hr>
+					<div class="center">
+						<p class="result" id="answer"></p>
+						<div class="pregame" id="actions">
+							<button  id="help" class="inactivebutton" disabled aria-hidden="true"></button>
+							<button id="newgame" class="inactivebutton" disabled aria-hidden="true"></button>
+							<button id="giveup" class="inactivebutton" disabled aria-hidden="true"></button>
+							<button  id="comments" class="inactivebutton" disabled aria-hidden="true"></button>
+						</div>
+					</div>
+					<div id="winners"></div>
+				</div>
+			</section>
+     	</div>
+	</main>
+	<footer class='flexdown'>
+		<div class="foot coords">
+			<ul>
+				<li>
+					<span id="coordsname">Pierre Smolinski</span>
+				</li>
+				<li>
+					<img class="duo" src="img/map-location.png" alt="Logo Adresse" /> 20, rue du Gué Robert <br>44000 Nantes, France
+				</li>
+				<li>
+					<img class="uno" src="img/oldtel.png" alt="Logo Téléphone" />
+					<a href="tel:+33646687275">+33(0)6 46 68 72 75</a>
+				</li>
+				<li>
+					<img class="duo" src="img/email.png" alt="Logo Mail" />
+					<a href="mailto:pierre.smolinski7@gmail.com"> pierre.smolinski7@gmail.com</a>
+				</li>
+			</ul>
+		</div>
+		<div class="foot contactform">
+			<hr class="lastsep">
+			<div id='contact'>
+				<p id="contactme">ME CONTACTER</p>
+				<form method="post" action="php/traitb.php">
+					<input class="inputform" id="name" name="nom" type="text" placeholder="NOM" required>
+			  		<input class="inputform" id="email" name="email" type="text" placeholder="E-MAIL" required>
+			  		<textarea id="message" name="message" placeholder="MESSAGE" required></textarea>
+	  				<button id="submit" name="envoi" type="submit"></button> 
+	 			</form>
+ 			</div>
+		</div>
+		 <script></script> 
+			<audio id="v1">
+	         </audio>
+	         <audio id="v2">		
+	         </audio>
+	         <audio id="v3">
+	         		<source src='sound/power_up.mp3' type='audio/mp3'>
+	         		<source src='sound/power_up.wav' type='audio/wav'>
+	         </audio> 
+	         <audio id="v4">
+	         		<source src='sound/power_down.mp3' type='audio/mp3'>
+	         		<source src='sound/power_down.ogg' type='audio/ogg'>
+	         		<source src='sound/power_down.wav' type='audio/wav'>
+	         </audio> 
+	         <audio id="v5">
+	         		<source src='sound/replay.mp3' type='audio/mp3'>
+	         </audio>
+	         <audio id="v6">
+	         		<source src='sound/failure.mp3' type='audio/mp3'>
+	         		<source src='sound/failure.wav' type='audio/wav'>
+	         </audio>
+	         <audio id="v7">
+	         		<source src='sound/tranquille.mp3' type='audio/mp3'>
+	         		<source src='sound/tranquille.ogg' type='audio/ogg'>
+	         		<source src='sound/tranquille.wav' type='audio/wav'>
+	         </audio>
+	         <audio id="v8">
+	         		<!-- <source src='sound/rules.mp3' type='audio/mp3'> -->
+	         </audio>
+	         <audio id="v9">
+	         		<source src='sound/switch.mp3' type='audio/mp3'>
+	         </audio> 	         	         	         
+	         <div class="loading-bar"></div>
+	         <div id='licence'>
+	         	<div>Icons made by <a href="http://www.freepik.com"  target="_blank"  rel="noreferrer" title="Freepik">Freepik</a>, <a href="https://www.flaticon.com/authors/smashicons"  target="_blank"  rel="noreferrer" title="Smashicons">Smashicons</a>, <a href="https://www.flaticon.com/authors/twitter"  target="_blank"  rel="noreferrer" title="Twitter">Twitter</a>, <a href="https://www.flaticon.com/authors/smalllikeart"  target="_blank"  rel="noreferrer" title="smalllikeart">smalllikeart</a>, <a href="https://www.flaticon.com/authors/pixel-perfect"  target="_blank"  rel="noreferrer" title="Pixel perfect">Pixel perfect</a>, <a href="https://www.flaticon.com/authors/pixel-buddha"  target="_blank"  rel="noreferrer" title="Pixel Buddha">Pixel Buddha</a>, <a href="https://www.flaticon.com/authors/anton-saputro"  target="_blank"  rel="noreferrer" title="Anton Saputro">Anton Saputro</a>, <a href="https://www.flaticon.com/authors/vectors-market"  target="_blank"  rel="noreferrer" title="Vectors Market">Vectors Market</a>, <a href="https://www.flaticon.com/authors/dave-gandy"  target="_blank"  rel="noreferrer" title="Dave Gandy">Dave Gandy</a>, <a href="https://www.flaticon.com/authors/daniel-bruce"  target="_blank"  rel="noreferrer" title="Daniel Bruce">Daniel Bruce</a> from <a href="https://www.flaticon.com/"  target="_blank"  rel="noreferrer" title="Flaticon">www.flaticon.com</a>,  is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"  rel="noreferrer">CC 3.0 BY</a></div>
+				<div>Effects sound from <a href="https://www.zapsplat.com" title="Zapslat" target="_blank"  rel="noreferrer">Zapslat.com</a></div>
+			</div>
+	</footer>
+		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+		<!-- build:js javascript/min.js -->
+
+		<!-- polyfills -->
+		<script src="js/inc/shim/Base64.js"  ></script>
+		<script src="js/inc/shim/Base64binary.js"  ></script>
+		<script src="js/inc/shim/WebAudioAPI.js"  ></script>
+		<!-- midi.js package -->
+		<script src="js/midi/audioDetect.js"  ></script>
+		<script src="js/midi/gm.js"  ></script>
+		<script src="js/midi/loader.js"  ></script>
+		<script src="js/midi/plugin.audiotag.js"  ></script>
+		<script src="js/midi/plugin.webaudio.js"  ></script>
+		<script src="js/midi/plugin.webmidi.js"  ></script>
+		<!-- utils -->
+		<script src="js/util/dom_request_xhr.js"  ></script>
+		<!-- keyboard events : used for the piano - assign keyboard keys to piano keys -->
+		<script src="js/mousetrap.min.js"></script>
+		<!-- js media queries : display the different sizes of pianos for different screen sizes -->
+		<script src="js/enquire.min.js"></script>
+		<!-- for some animations -->
+		<script src="js/anime.min.js"></script>
+		<!-- helper functions -->
+		<script src="js/helper.js"></script>
+		<!-- the kalimba -->
+		<script src="js/kalimba.js"></script>
+		<!-- main script -->
+		<script src="js/main.js"></script>
+
+		<script src="javascript/utilities.js"></script>
+		<script src="javascript/gamelistener.js"></script>
+		<script src="javascript/gamesuite.js"></script>
+
+		<script src="javascript/base.js"></script>
+		<script src="folder-js/anime.min.js"></script>
+		<script src="folder-js/charming.min.js"></script>
+		<script src="folder-js/main.js"></script>
+
+		<script src="works-js/app.js"></script>
+		<script src="works-js/polyfill.js"></script>
+		<!-- endbuild -->
+		<script>
+		(function() {
+			new DurgaFx(document.querySelectorAll('.content--durga .folder--durga')[0]);
+			new DurgaFx(document.querySelectorAll('.content--durga .folder--durga')[1]);
+		})();
+		</script>
+</body>
+
+

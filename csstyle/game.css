@@ -1,0 +1,268 @@
+.game-header {
+	background-color: rgba(18,98,142,0.8);
+	padding: 1rem 0;
+	border-radius: 1rem 1rem 0 0;
+	font-family: Courier, Arial, sans-serif;
+	margin: 0 25px 0.83em;
+	text-align: center;
+}
+
+.welcome{
+	position: relative;
+	right: 40px;
+	height: 75px;
+	margin: 0 auto 0;
+}
+
+.whole {
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+.result {
+	display: inline-block;
+	font-size: 2.2rem;
+	margin-top: 0;
+	margin-bottom: 0;
+	vertical-align: top;
+}
+
+#effect2.voile{	border-radius: 3rem 3rem 0 0;}
+
+.voile {
+	z-index:50;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+
+	opacity: 0.3;
+	transition: opacity 3.8s;
+	transition-timing-function: ease-in;
+}
+
+#effect {	border-radius: 0 0 3rem 3rem;}
+
+#rustine {
+	display: inline-block;
+	float: right;
+	text-align: center;
+	font-weight: bold;
+	font-size: 3rem;
+	/*tentative vaine*/
+	display: table-cell;
+	vertical-align: middle;  
+}
+
+#power {margin-bottom: -1px;}
+
+.shadow {
+	background-color: black;
+	z-index: 50;
+	opacity: 0.3;
+	height: 80px;
+
+	display: inline-block;
+
+	margin-bottom: -8px; 
+	margin-top: 0;
+
+	transition: opacity 3.8s;
+	transition-timing-function: ease-in;
+}
+
+#lettermind {
+	color: white;
+ 	background-color: #000;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='126' height='84' viewBox='0 0 126 84'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2310cff7' fill-opacity='0.4'%3E%3Cpath d='M126 83v1H0v-2h40V42H0v-2h40V0h2v40h40V0h2v40h40V0h2v83zm-2-1V42H84v40h40zM82 42H42v40h40V42zm-50-6a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm96 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-42 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm30-12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM20 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm12 24a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 78a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm12 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm54 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM50 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM50 78a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm54-12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm12 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM92 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM92 78a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24-42a4 4 0 1 1 0-8 4 4 0 0 1 0 8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+	
+	font-family: QuickSand, Arial, sans-serif;
+	font-size: 2.2rem;
+	border-radius: 3rem;
+	margin-bottom: 1.4rem;
+	padding-bottom: 0.1rem;
+}
+
+#lettermind button {
+  position: relative;
+  overflow: hidden;
+}
+
+#lettermind .activebutton:after {
+  content: "";
+  position: absolute;
+  top: -110%;
+  left: -210%;
+  width: 200%;
+  height: 200%;
+  opacity: 0;
+  transform: rotate(30deg);
+  background: linear-gradient(
+    to right, 
+    rgba(255, 255, 255, 0.13) 0%,
+    rgba(255, 255, 255, 0.13) 77%,
+    rgba(255, 255, 255, 0.5) 92%,
+    rgba(255, 255, 255, 0.0) 100%
+  );
+}
+
+#lettermind .activebutton:hover:after {
+  opacity: 1;
+  top: -30%;
+  left: -30%;
+  transition-property: left, top, opacity;
+  transition-duration: 0.7s, 0.7s, 0.15s;
+  transition-timing-function: ease;
+}
+
+#lettermind .activebutton:active:after {  opacity: 0;}
+
+#light, #lvlchange, #start,#instructions,#topscores,#infos,#statistics,#help,#newgame,#giveup,#comments {
+	width: 80px;
+	height: 75px;
+	background-repeat: no-repeat;
+	background-origin: content-box;
+
+	background-image: url('../img/css_sprites.png');
+	display: inline-block;
+}
+
+/*Sprite des icones du jeu*/
+
+#light {
+	background-position: -178px -94px ;
+	z-index: 30;
+} 
+
+#lvlchange {	background-position: -262px -10px;} 
+#start {	background-position: -10px -10px ;}
+#instructions {	background-position: -10px -262px;}
+#topscores {	background-position: -178px -10px;}
+#infos {	background-position: -94px -94px ;}
+#statistics {	background-position: -262px -94px;}
+#help {	background-position: -10px -94px ;}
+#newgame {	background-position: -10px -178px ;}
+#giveup {	background-position: -94px -262px ;}
+#comments {	background-position: -262px -178px ;}
+
+.error {	text-decoration: underline tomato;}
+
+.tentries {
+	width: 105px;
+	position: relative;
+	bottom: 7px;
+}
+
+.tries {	opacity:0;}
+
+.how, .further {
+	font-size: 2rem;
+	display: none;
+	margin-bottom: 2rem;
+	background-color: white;
+	color: black;
+	padding-top: 0.1rem;
+	padding-bottom: 0.1rem;
+	font-family: QuickSand, Arial, sans-serif;
+}
+
+.details {
+	color: white;
+	background-color: rgb(2,151,222);
+	font-size: 1.6rem;
+	font-weight: 400;
+}
+
+.game img{	height: 42px;}
+
+.gameline {
+	max-width:400px;
+	display:inline-block;
+	padding-top: 0.3rem;
+}
+
+.gameline label {	line-height: 3rem;}
+
+.game {
+	height:46px;
+	width:46px;
+	padding: 0;
+	border-radius: 50%;
+	background-color: rgb(55,55,55);
+}
+
+#current {
+	color: black;
+	background-color: white;
+	border: 1px solid #a76a14;
+}
+
+#current .tentries {
+	background-color: black;
+	color:white;
+}
+
+.inactivebutton {	background-color: grey;}
+
+.activebutton {
+	cursor: pointer;
+	background-color: white;
+}
+
+.pregame button {	text-align: center;}
+
+ #play, #clue { margin: 0;}
+
+.center {
+	display: block;
+	text-align: center;
+}
+
+.bg-black{
+	background-color: black;
+	color:white;
+}
+
+.bg-white{
+	background-color: white;
+	color:black;
+}
+
+.pregame button, .pregame p {
+	display: inline-block;
+	margin: 1rem;
+}
+
+.pregame p {	text-align: center;}
+
+span.bg-white {	padding: 0.5rem;}
+
+#wellmessage p, #wellmessage span {
+	display: block;
+}
+
+.firsts {	background-color: #fc852e;}
+
+.seconds {	background-color: #ebba16;}
+
+#lvl {
+	display: inline-block;
+	padding: 17px;
+	margin-bottom: 0;
+	margin-top: 0;
+	vertical-align: top;
+	font-size: 36px;
+}
+
+.red {background-color: #e34;}
+
+.yellow{background-color: #fd5;}
+
+.green {background-color: #7b5;} 
+
+.hidden{display:none;}
+
+.nextPage, .prevPage {
+	height:36px;
+	width:36px;
+	padding: 0;
+}

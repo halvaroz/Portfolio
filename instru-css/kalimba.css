@@ -1,0 +1,237 @@
+*,
+*::after,
+*::before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.a_content {
+	font-size: 160%;
+	font-family: 'Quicksand', sans-serif;
+	color: #2a2c36;
+	background: #fff;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	  background-image : url('../img/standing-desk.svg');
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	background-size: 29%;
+}
+
+/* Flexbox helper classes */
+.flexy {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+
+.flexy--center {
+	justify-content: center;
+}
+
+
+
+/* Zero-element page loader */
+.js .loading::before,
+.js .loading::after {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.js .loading::before {
+	content: '';
+	background: rgb(42, 44, 54);
+}
+
+.js .loading::after {
+	content: 'Loading... \APlease turn on your sound';
+	line-height: 2;
+	padding: 2em 0 0 0;
+	text-align: center;
+	white-space: pre;
+	font-weight: bold;
+	color: #5b5d69;
+	background: url(../img/note.svg) no-repeat 50% calc(50% - 3em);
+	background-size: 2.5em;
+	animation: loaderAnim 1s alternate infinite;
+}
+
+@keyframes loaderAnim {
+	to {
+		opacity: 0.2;
+	}
+}
+
+/* Intro header */
+
+
+
+.interaction {
+	position: relative;
+	width: 140px;
+	height: 72px;
+	margin: 0 auto;
+	pointer-events: none;
+	background: url(../img/interaction_dark.svg) no-repeat center center;
+	background-size: cover;
+}
+
+
+.interaction--corner {
+	position: absolute;
+	right: 0.5em;
+	bottom: 1em;
+}
+
+/* Content */
+.a_content {
+	position: relative;
+	min-height: 100vh;
+	padding: 15vh 0 0;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+
+.content__inner {
+	position: relative;
+	z-index: 10;
+/* 	max-width: 700px; */
+	margin: 0 auto;
+	text-align: center;
+	pointer-events: none;
+
+
+}
+
+
+
+.a_content__title {
+	font-size: 5em;
+	font-weight: 900;
+	line-height: 0.85;
+	position: relative;
+	z-index: 10;
+	margin: 0;
+	padding: 0 5vmax 0 5vmax;
+	text-transform: uppercase;
+	pointer-events: none;
+}
+
+
+.content__subtitle {
+	font-family: 'Arapey', serif;
+	font-size: 2.5em;
+	font-weight: normal;
+	margin: 0.5em 0 1em;
+}
+
+
+.content--kalimba::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	pointer-events: none;
+/* 	background: linear-gradient(to bottom, #fff 20%, rgba(255,255,255,0)); */
+}
+
+
+.content--cursor-dark {
+	cursor: url(../img/cursors/cursor_dark.png) 16 16, url(../img/cursors/cursor_dark.cur), pointer;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 50em) {
+	
+	.content__subtitle {
+		font-size: 1.25em;
+	}
+	
+	.a_content__title {
+		font-size: 4em;
+	}
+	.content__inner {
+		padding: 0 5vw;
+	}
+	
+	/* .interaction--corner {
+		position: relative;
+		right: auto;
+		bottom: auto;
+		margin: 3em auto 0;
+	} */
+
+}
+
+@media screen and (max-width: 40em) {
+	.interaction {
+		display: none;
+	}
+
+	 /* .content--kalimba .content__inner {
+	 		margin: auto;
+	 	}  */
+}
+
+
+/* Instruments */
+.instrument {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+.instrument--hidden {
+	opacity: 0;
+}
+
+.instrument > svg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;   
+}
+
+
+/* Kalimba */
+.kalimba__inner {
+	/* fill: #ffe3a2; 
+	stroke: #ffc938; */
+	stroke-width: 1px;
+
+	fill: #c1c8e8;
+	stroke: #3d51b5;
+}

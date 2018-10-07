@@ -6,16 +6,16 @@
 		<meta name="description" content="Pierre SMOLINSKI, développeur intégrateur en réalisation d'applications Web à Nantes. Actuellement en recherche d'emploi." />
 		<meta name="Language" CONTENT="fr" />
 		<meta name=viewport content="width=device-width, initial-scale=1">
-		<!-- build:css csstyle/min.css -->
-		<link rel="stylesheet" href="csstyle/normalize.css">
-		<link rel="stylesheet" href="csstyle/game.css">
-		<link rel="stylesheet" href="csstyle/footer.css">
-		<link rel="stylesheet" href="csstyle/style.css">
-		<link rel="stylesheet" href="csstyle/about-link.css">
+		<!-- build:css css/min.css -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/about-link.css">
+		<link rel="stylesheet" href="css/footer.css">
+		<link rel="stylesheet" href="css/game.css">
+		<link rel="stylesheet"  href="css/kalimba.css" />
+		<link rel="stylesheet"  href="css/projects.css" />
+		<link rel="stylesheet"  href="css/skills.css" />
+		<link rel="stylesheet" href="css/style.css">
 
-		<link rel="stylesheet"  href="folder-css/demo.css" />
-		<link rel="stylesheet"  href="works-css/work-style.css" />
-		<link rel="stylesheet"  href="instru-css/kalimba.css" />
 		<!-- endbuild -->
 		<script>
 			/*document.documentElement.className = 'js';*/
@@ -324,32 +324,32 @@
 				</article>
 				</div></div></div>
 			</section>
-			<section  class="section" id="lettermind">
+			<section  class="section game" id="lettermind">
 				<div id="effect2" class="voile">
 					<h2 class="game-header">Lettermind</h2>
 				</div>
-				<div id="power" class="off">
-					<button class="activebutton" id="light" aria-hidden="true">
+				<div id="power" class="g-power" class="off">
+					<button id="light" class="g-light activebutton" aria-hidden="true">
 					</button>
-					<div id="rustine" class="shadow"></div>
+					<div id="rustine" class="rustine shadow"></div>
 				</div>
 				<div id="effect" class="voile">
 					<div class="whole">
 						<div class='center'>
 							<div class="level">
-								<button class="inactivebutton" id="lvlchange" disabled aria-hidden="true">
+								<button  id="lvlchange" class="g-levelchoice inactivebutton" disabled aria-hidden="true">
 								</button>
 								<p id="lvl" class="bg-white green">Niveau I</p>
 							</div>
 							<div class="pregame">
 								<p id='play'>
-									<button class="inactivebutton gamebutton" id="start" disabled aria-hidden="true"></button>
+									<button gamebutton" id="start" class="g-start inactivebutton" disabled aria-hidden="true"></button>
 								</p>
-								<button class="inactivebutton" id="instructions" disabled aria-hidden="true">
+								<button  id="instructions" class="g-instructions inactivebutton" disabled aria-hidden="true">
 								</button>
-								<button class="inactivebutton" id="topscores" onclick="openscore();event.preventDefault();" disabled aria-hidden="true"></button>
-								<button class="inactivebutton" id="infos" disabled aria-hidden="true"></button>
-								<button class="inactivebutton" id="statistics" disabled aria-hidden="true"></button>		
+								<button  id="topscores" class="g-topscores inactivebutton" onclick="openscore();event.preventDefault();" disabled aria-hidden="true"></button>
+								<button  id="infos" class="g-infos inactivebutton" disabled aria-hidden="true"></button>
+								<button  id="statistics" class="g-stats inactivebutton" disabled aria-hidden="true"></button>		
 							</div>							
 							<div class="how">
 								<ul>
@@ -382,7 +382,7 @@
 									<div class="<?=$i?> gameline" >
 										<label for="<?=$attempts[$i-1]?>"><?=$i?>.</label>
 										<input type="text" class="tentries <?=$attempts[$i-1]?>"  disabled>
-										<button class="game details" disabled id="<?=$attempts[$i-1]?>" value="Essai">
+										<button class="game-button details" disabled id="<?=$attempts[$i-1]?>" value="Essai">
 											<img src="img/checkedb.svg" alt="Icone de validation d'une réponse"/>
 										</button>
 										<p class="result" id="<?=$attempts[$i-1]?>try" aria-hidden="true"></p>
@@ -397,10 +397,10 @@
 					<div class="center">
 						<p class="result" id="answer"></p>
 						<div class="pregame" id="actions">
-							<button  id="help" class="inactivebutton" disabled aria-hidden="true"></button>
-							<button id="newgame" class="inactivebutton" disabled aria-hidden="true"></button>
-							<button id="giveup" class="inactivebutton" disabled aria-hidden="true"></button>
-							<button  id="comments" class="inactivebutton" disabled aria-hidden="true"></button>
+							<button  id="help" class="g-help inactivebutton" disabled aria-hidden="true"></button>
+							<button id="newgame" class="g-newgame inactivebutton" disabled aria-hidden="true"></button>
+							<button id="giveup" class="g-giveup inactivebutton" disabled aria-hidden="true"></button>
+							<button  id="comments" class="g-comments inactivebutton" disabled aria-hidden="true"></button>
 						</div>
 					</div>
 					<div id="winners"></div>
@@ -412,7 +412,7 @@
 		<div class="foot coords">
 			<ul>
 				<li>
-					<span id="coordsname">Pierre Smolinski</span>
+					<span class="identity">Pierre Smolinski</span>
 				</li>
 				<li>
 					<img class="duo" src="img/map-location.png" alt="Logo Adresse" /> 20, rue du Gué Robert <br>44000 Nantes, France
@@ -427,15 +427,15 @@
 				</li>
 			</ul>
 		</div>
-		<div class="foot contactform">
-			<hr class="lastsep">
-			<div id='contact'>
-				<p id="contactme">ME CONTACTER</p>
+		<div class="foot contactform" id="contact">
+			<hr class="footer-hr">
+			<div class="contact-form">
+				<p class="mail--header">ME CONTACTER</p>
 				<form method="post" action="php/traitb.php">
 					<input class="inputform" id="name" name="nom" type="text" placeholder="NOM" required>
 			  		<input class="inputform" id="email" name="email" type="text" placeholder="E-MAIL" required>
 			  		<textarea id="message" name="message" placeholder="MESSAGE" required></textarea>
-	  				<button id="submit" name="envoi" type="submit"></button> 
+	  				<button class="mail--button" name="envoi" type="submit"></button> 
 	 			</form>
  			</div>
 		</div>
@@ -472,7 +472,7 @@
 	         		<source src='sound/switch.mp3' type='audio/mp3'>
 	         </audio> 	         	         	         
 	         <div class="loading-bar"></div>
-	         <div id='licence'>
+	         <div class='licence'>
 	         	<div>Icons made by <a href="http://www.freepik.com"  target="_blank"  rel="noreferrer" title="Freepik">Freepik</a>, <a href="https://www.flaticon.com/authors/smashicons"  target="_blank"  rel="noreferrer" title="Smashicons">Smashicons</a>, <a href="https://www.flaticon.com/authors/twitter"  target="_blank"  rel="noreferrer" title="Twitter">Twitter</a>, <a href="https://www.flaticon.com/authors/smalllikeart"  target="_blank"  rel="noreferrer" title="smalllikeart">smalllikeart</a>, <a href="https://www.flaticon.com/authors/pixel-perfect"  target="_blank"  rel="noreferrer" title="Pixel perfect">Pixel perfect</a>, <a href="https://www.flaticon.com/authors/pixel-buddha"  target="_blank"  rel="noreferrer" title="Pixel Buddha">Pixel Buddha</a>, <a href="https://www.flaticon.com/authors/anton-saputro"  target="_blank"  rel="noreferrer" title="Anton Saputro">Anton Saputro</a>, <a href="https://www.flaticon.com/authors/vectors-market"  target="_blank"  rel="noreferrer" title="Vectors Market">Vectors Market</a>, <a href="https://www.flaticon.com/authors/dave-gandy"  target="_blank"  rel="noreferrer" title="Dave Gandy">Dave Gandy</a>, <a href="https://www.flaticon.com/authors/daniel-bruce"  target="_blank"  rel="noreferrer" title="Daniel Bruce">Daniel Bruce</a> from <a href="https://www.flaticon.com/"  target="_blank"  rel="noreferrer" title="Flaticon">www.flaticon.com</a>,  is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"  rel="noreferrer">CC 3.0 BY</a></div>
 				<div>Effects sound from <a href="https://www.zapsplat.com" title="Zapslat" target="_blank"  rel="noreferrer">Zapslat.com</a></div>
 			</div>

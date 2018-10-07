@@ -42,7 +42,7 @@
 
 #effect {	border-radius: 0 0 3rem 3rem;}
 
-#rustine {
+.rustine {
 	display: inline-block;
 	float: right;
 	text-align: center;
@@ -53,7 +53,7 @@
 	vertical-align: middle;  
 }
 
-#power {margin-bottom: -1px;}
+.g-power {margin-bottom: -1px;}
 
 .shadow {
 	background-color: black;
@@ -70,7 +70,7 @@
 	transition-timing-function: ease-in;
 }
 
-#lettermind {
+.game {
 	color: white;
  	background-color: #000;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='126' height='84' viewBox='0 0 126 84'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2310cff7' fill-opacity='0.4'%3E%3Cpath d='M126 83v1H0v-2h40V42H0v-2h40V0h2v40h40V0h2v40h40V0h2v83zm-2-1V42H84v40h40zM82 42H42v40h40V42zm-50-6a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm96 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-42 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm30-12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM20 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm12 24a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 78a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm12 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm54 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM50 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM50 78a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm54-12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm12 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM92 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM92 78a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24-42a4 4 0 1 1 0-8 4 4 0 0 1 0 8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
@@ -82,12 +82,12 @@
 	padding-bottom: 0.1rem;
 }
 
-#lettermind button {
+.game button {
   position: relative;
   overflow: hidden;
 }
 
-#lettermind .activebutton:after {
+.game .activebutton:after {
   content: "";
   position: absolute;
   top: -110%;
@@ -105,7 +105,7 @@
   );
 }
 
-#lettermind .activebutton:hover:after {
+.game .activebutton:hover:after {
   opacity: 1;
   top: -30%;
   left: -30%;
@@ -114,7 +114,7 @@
   transition-timing-function: ease;
 }
 
-#lettermind .activebutton:active:after {  opacity: 0;}
+.game .activebutton:active:after {  opacity: 0;}
 
 #light, #lvlchange, #start,#instructions,#topscores,#infos,#statistics,#help,#newgame,#giveup,#comments {
 	width: 80px;
@@ -128,21 +128,21 @@
 
 /*Sprite des icones du jeu*/
 
-#light {
+.g-light {
 	background-position: -178px -94px ;
 	z-index: 30;
 } 
 
-#lvlchange {	background-position: -262px -10px;} 
-#start {	background-position: -10px -10px ;}
-#instructions {	background-position: -10px -262px;}
-#topscores {	background-position: -178px -10px;}
-#infos {	background-position: -94px -94px ;}
-#statistics {	background-position: -262px -94px;}
-#help {	background-position: -10px -94px ;}
-#newgame {	background-position: -10px -178px ;}
-#giveup {	background-position: -94px -262px ;}
-#comments {	background-position: -262px -178px ;}
+.g-levelchoice {	background-position: -262px -10px;} 
+.g-start {	background-position: -10px -10px ;}
+.g-instructions {	background-position: -10px -262px;}
+.g-topscores {	background-position: -178px -10px;}
+.g-infos {	background-position: -94px -94px ;}
+.g-stats {	background-position: -262px -94px;}
+.g-help {	background-position: -10px -94px ;}
+.g-newgame {	background-position: -10px -178px ;}
+.g-giveup {	background-position: -94px -262px ;}
+.g-comments {	background-position: -262px -178px ;}
 
 .error {	text-decoration: underline tomato;}
 
@@ -172,7 +172,7 @@
 	font-weight: 400;
 }
 
-.game img{	height: 42px;}
+.game-button img{	height: 42px;}
 
 .gameline {
 	max-width:400px;
@@ -182,7 +182,7 @@
 
 .gameline label {	line-height: 3rem;}
 
-.game {
+.game-button {
 	height:46px;
 	width:46px;
 	padding: 0;

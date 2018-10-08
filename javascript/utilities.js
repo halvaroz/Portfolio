@@ -37,13 +37,13 @@ function sleepingTry(e){
 	$(`.${Object.keys(attempts)[e-1]}`).css("background-color","rgb(235,235,228)");
 	$(`#${Object.keys(attempts)[e-1]}`).css("background-color","rgb(55,55,55)");
 	$(`#${Object.keys(attempts)[e-1]}`).prop('disabled','true');
-	$(`.${e}`).removeAttr('id');
+	$(`.${e}`).removeClass('current');
 }
 
 function activeTry(e){
 	$(`#${Object.keys(attempts)[e-1]}`).css('background-color','white');
 	$(`.${Object.keys(attempts)[e-1]}`).css("background-color","black");
-	$(`.${e}`).attr('id',"current");
+	$(`.${e}`).addClass('current');
 	$(`#${Object.keys(attempts)[e-1]}`).removeAttr('disabled');
 	$(`.${Object.keys(attempts)[e-1]}`).removeAttr('disabled');
 }
@@ -95,12 +95,26 @@ function setDifficulty($difficulty){
 
 function setRustine(){
 	let largeur= window.innerWidth-118;
-
     /*adaptation au passage à un font-size=57% pour le html*/
         if (window.innerWidth<480){
         	largeur += 2;
-        }
-        
+        } 
 		largeur = largeur+'px';
-        $('#rustine').css('width',largeur);     
+        $('#js-g-rustine').css('width',largeur);     
 }
+
+
+function zoom(){
+		console.log('here')
+		console.log($('.js-sound-popup'))
+		$('.js-sound-popup').fadeIn('slow')
+		/*$('body').addClass('blur-filter')*/
+		console.log($('.js-sound-popup-close')[0]);
+
+		$('.js-sound-popup-close').on('click', function(){
+			$('.js-sound-popup').fadeOut('slow')
+			console.log('here')
+		})
+}
+
+

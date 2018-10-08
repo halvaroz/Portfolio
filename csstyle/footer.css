@@ -1,3 +1,4 @@
+/*V*/
 footer {
 	color: #c1c4ec;
 	font-family: 'Signika';
@@ -16,10 +17,14 @@ footer a {
 	text-decoration: none;
 }
 
+.float-clear{
+	clear: both;
+}
+
 .coords{  	font-family : 'Quicksand', 'Arial', sans-serif;}
 
 
-#coordsname {
+.identity {
 	color: tomato;
 	font-size: 3rem;
 }
@@ -36,7 +41,7 @@ label {
 }
 
 
-#contactme {
+.mail--header {
 	position: relative;
 	font-size: 2.3em;
 	text-align: center;
@@ -47,16 +52,16 @@ label {
 	color:#b3aca7;
 }
 
-#contact {
+.contact-form {
 	position: relative;
 	max-width: 480px;
 	margin: 3.5rem auto 3.5rem auto;
 	display: inline-block;
 }
 
-hr.lastsep {opacity: 0;		width: 90%;}
+.footer-hr {opacity: 0;		width: 90%;}
 
-.inputform, textarea, #submit {
+.inputform, textarea, .mail--button {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 0.875em;
 	width: 470px;
@@ -83,7 +88,7 @@ textarea {
 	resize: none;
 }
 
-#submit {
+.mail--button {
 	margin: -50px 0 0 0;
 	cursor: pointer;
 	background-image: url('../img/mail.png');
@@ -92,11 +97,21 @@ textarea {
 	padding: 25px 80px 15px;
 }
 
-#submit:active{	top:1px;  position:relative;
+.mail--button:active{	top:1px;  position:relative;
 }
 
-#licence {
-	font-family: arial;
+.licence {
+	font-family: Arial, sans-serif;
 	color: white;
 	font-size:1.2rem;
+	text-align: center;
+}
+
+
+@media screen and (max-width:960px) {
+      .footer-section {
+         	margin-left: 3rem;
+         	margin-right: 3rem;
+         } 
+    .footer-hr {opacity: 1;}
 }

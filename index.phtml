@@ -6,17 +6,7 @@
 		<meta name="description" content="Pierre SMOLINSKI, développeur intégrateur en réalisation d'applications Web à Nantes. Actuellement en recherche d'emploi." />
 		<meta name="Language" CONTENT="fr" />
 		<meta name=viewport content="width=device-width, initial-scale=1">
-		<!-- build:css css/min.css -->
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/about-link.css">
-		<link rel="stylesheet" href="css/footer.css">
-		<link rel="stylesheet" href="css/game.css">
-		<link rel="stylesheet"  href="css/kalimba.css" />
-		<link rel="stylesheet"  href="css/projects.css" />
-		<link rel="stylesheet"  href="css/skills.css" />
-		<link rel="stylesheet" href="css/style.css">
-
-		<!-- endbuild -->
+		<link rel="stylesheet" href="css/min.css">
 		<script>
 			/*document.documentElement.className = 'js';*/
 			function browserCanUseCssVariables() { return window.CSS && window.CSS.supports && window.CSS.supports('--fake-var', 0); }
@@ -49,40 +39,56 @@
 			</symbol>
 		</svg>
 	<header>
-		<nav class="menu flex" id="flexnav">
-			<button id="sound">
-				<img src="img/audio-off.png" alt="" />
-			</button>
-			<a href="#about" class="anchors">
-				<div id="uno" class="iconav"></div>
-				<span class="header">Présentation</span>
+		<nav class="menu flex">
+			<a href="#about" class="nav-anchor anchor-1">
+				<div class="anchor-1 nav-icon"></div>
+				<span class="nav-text">Présentation</span>
 			</a>
-			<a href="#competences"  class="anchors">
-				<div id="tres" class="iconav"></div>
-				<span class="header">Compétences</span>
+			<a href="#skills"  class="nav-anchor anchor-2">
+				<div class="anchor-2 nav-icon"></div>
+				<span class="nav-text">Compétences</span>
 			</a>
-			<a href="index.php" id="identity">
+			<a href="index.php" class="nav-identity">
 				<div>
-					<h1 class="tert" id="uns">halvaro</h1>
-					<h2 class="tert" id="deus">πR</h2>
+					<h1 class="nav-names longname">halvaro</h1>
+					<h2 class="nav-names shortname">πR</h2>
 				</div>
 			</a>
-			<a href="#projects"  class="anchors">
-				<div id="dos" class="iconav"></div>
-				<span class="header">Réalisations</span>
+			<a href="#projects"  class="nav-anchor anchor-3">
+				<div class="anchor-3 nav-icon"></div>
+				<span class="nav-text">Réalisations</span>
 			</a>
-			<a href="#contact" class="anchors" >
-				<div id="quatro" class="iconav"></div>
-				<span class="header">Contact</span>
+			<a href="#contact" class="nav-anchor anchor-4" >
+				<div class="anchor-4 nav-icon"></div>
+				<span class="nav-text">Contact</span>
 			</a>
 		</nav>
 	</header>
 	<main>
 		<div class="container">
-			<section class="a_content content--instrument content--instrument-alt content--kalimba content--cursor-dark flexy">
+			<button class="sound-button">
+			
+				<img src="img/audio-off.png" alt="" />
+			</button>
+			<div class ='js-sound-popup sound-popup'>
+				<p>Avec le son activé, vous pouvez :</p>
+				
+					<p>Jouer de la musique dans la section "Interlude musical" en :</p>
+					<ul>
+						<li>1 : passant sur les 8 touches avec le clic gauche de votre souris maintenu</li>
+						<li>2 : cliquant sur l'une des 8 touches bleus claires de l'instrument</li>
+						<li>3 : utilisant les touches S,D,F,G,H,J,K,L de votre clavier</li>
+					</ul>
+					<p>Entendre quelques animations sonores du jeu Lettermind.</p>
+				
+ <p><span class="js-sound-popup-close sound-popup-close">&times;</span></p>
+</div>
+
+			
+			<section id="about" class="a_content content--instrument content--instrument-alt content--kalimba content--cursor-dark flexy">
 				<div class="content__inner content__inner--medium flexy flexy--center">
 					<h2 class="a_content__title">Préambule</h2>
-					<p class="content__subtitle"><p>Bonjour, je suis actuellement à la recherche d'un emploi en tant que développeur web. J'ai pu acquérir un premier socle de connaissances par l'intermédiaire d'une formation de la <a href="https://3wa.fr/" class="textlinks" target="_blank" rel="noreferrer" title="Site de la 3WA">3W Academy</a>. Ceci au cours de la première moitié de l'année 2018.</p>
+					<p class="content__subtitle">Bonjour, je suis actuellement à la recherche d'un emploi en tant que développeur web. J'ai pu acquérir un premier socle de connaissances par l'intermédiaire d'une formation de la <a href="https://3wa.fr/" class="textlinks" target="_blank" rel="noreferrer" title="Site de la 3WA">3W Academy</a>. Ceci au cours de la première moitié de l'année 2018.</p>
 				<p>Vous trouverez ci-dessous une partie des travaux que j'ai réalisés. Disponible dès maintenant, vous pouvez me contacter via la rubrique <a class="textlinks" title="Section Contact" href="#contact">Contact</a> en bas de la page.</p>
 				</div>
 				<div class="kalimba instrument">
@@ -99,13 +105,9 @@
 				</div>
 				<div class="interaction interaction--corner"></div>
 			</section>
-     		<section class="content content--durga" id="competences">
+     		<section class="content content--durga" id="skills">
 				<div class="grid">
-					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
-					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
-					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
-					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
-					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					
 					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
 					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
 					<div class="grid__item">
@@ -123,7 +125,6 @@
 									<p class="folder__detail">MySQL</p>
 									<p class="folder__detail">Responsive Web Design</p>
 									<p class="folder__detail">jQuery</p>
-									<p class="folder__detail">Bootstrap</p>
 								</div>
 								<div class="folder__icon-img folder__icon-img--cover">
 									<svg class="folder__icon-svg"><use xlink:href="#icon-foldercover"></use></svg>
@@ -146,11 +147,13 @@
 								<div class="folder__icon-deco"></div>
 								<div class="folder__preview folder__preview--text">
 									<p class="folder__detail">APIs</p>
-									<p class="folder__detail">Node.js</p>
-									<p class="folder__detail">Express.js</p>
-									<p class="folder__detail">MongoDB</p>
 									<p class="folder__detail">Gulp</p>
 									<p class="folder__detail">Github</p>
+									<p class="folder__detail">Node.js</p>
+									<p class="folder__detail">Bootstrap</p>
+									<p class="folder__detail">Express.js</p>
+									<p class="folder__detail">D3.js</p>
+									<p class="folder__detail">MongoDB</p>
 								</div>
 								<div class="folder__icon-img folder__icon-img--cover">
 									<svg class="folder__icon-svg"><use xlink:href="#icon-foldercover"></use></svg>
@@ -162,11 +165,16 @@
 					</div>
 					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
 					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
+					<div class="grid__item"><div class="dummy"><svg><use xlink:href="#icon-folderdummy"></use></svg></div></div>
 				</div>
 			</section>
 			<section class="works" id="projects">
 				<h2 class="entete">Réalisations</h2>
-				<div class="cntr"><img class='left-icon' src="img/log.png" alt="" /><p>Une partie des travaux sur lesquels j'ai bûché et planché.</p><img class='right-icon' src="img/board.png" alt="" /></div>
+				<div class="works-header"><img class='left-icon' src="img/log.png" alt="" /><p>Une partie des travaux sur lesquels j'ai bûché et planché.</p><img class='right-icon' src="img/board.png" alt="" /></div>
 				<div class="whole-container">
 					<div class="pf-container">
 						<div class="portfolio" id="js-portfolio">
@@ -214,7 +222,7 @@
 					  </div>
 					  <div class="card__footer">
 					    <span class="icon icon--time"></span>Août 2018
-					    <!-- <span class="icon icon--comment"></span><a href="#">39 comments</a> -->
+					    <span class="icon icon--comment"></span><a class="demos" href="#lettermind" title="">Try it Yourself >></a>
 					  	</div> 
 				</article>
 				<article class="card project js-item">
@@ -240,24 +248,25 @@
 				</article>
 				<article class="card project js-item">
 				 	<header class="card__thumb">
-						<a href="#"><img src="https://via.placeholder.com/350x150"></a>
+						<a href="#"><img src="img/real/gamemap.png"></a>
 					</header>
-					<div class="card__date">
+					<!-- <div class="card__date">
 					    <span class="card__date__day">12</span>
 					    <span class="card__date__month">Mai</span>
-					</div>
+					</div> -->
 					<div class="card__body">
-					    <div class="card__category"><a href="#">Photos</a></div>
-					    <h2 class="card__title"><a href="#">Bender Should Not Be Allowed on TV</a></h2>
-					    <div class="card__subtitle">A Head in the Polls</div>
+					    <div class="card__category"><a href="#">Jeu</a></div>
+					    <h2 class="card__title"><a href="#">Carte interactive</a></h2>
+					    <div class="card__subtitle">javaScript, D3.js, SVG</div>
 					    <p class="card__description">
-					      With a warning label this big, you know they gotta be fun! This is the worst part. The calm before the battle. No! The cat shelter's on to me. Yes, I saw. You were doing well, until everyone died. Daylight and everything.
+					      Jeu réalisé à partir d'une carte en SVG<br>
+					      Data-visualisation simple avec colorisation dynamique
 					    </p>
 					  </div>
-					  <!-- <div class="card__footer">
-					    <span class="icon icon--time"></span>6 min
+					  <div class="card__footer">
+					    <span class="icon icon--time"></span>Octobre 2018
 					    <span class="icon icon--comment"></span><a href="#">39 comments</a>
-					  					</div> -->
+					  					</div>
 				</article>
 				<article class="card project js-item">
 				 	<header class="card__thumb">
@@ -325,31 +334,31 @@
 				</div></div></div>
 			</section>
 			<section  class="section game" id="lettermind">
-				<div id="effect2" class="voile">
+				<div id="js-g-header" class="g-title shadow">
 					<h2 class="game-header">Lettermind</h2>
 				</div>
 				<div id="power" class="g-power" class="off">
 					<button id="light" class="g-light activebutton" aria-hidden="true">
 					</button>
-					<div id="rustine" class="rustine shadow"></div>
+					<div id="js-g-rustine" class="rustine shadow"></div>
 				</div>
-				<div id="effect" class="voile">
+				<div id="js-g-body" class="g-main shadow">
 					<div class="whole">
 						<div class='center'>
 							<div class="level">
-								<button  id="lvlchange" class="g-levelchoice inactivebutton" disabled aria-hidden="true">
+								<button  id="lvlchange" class="g-difficulty inactivebutton" disabled aria-hidden="true">
 								</button>
-								<p id="lvl" class="bg-white green">Niveau I</p>
+								<p id="lvl" class="lvl-display bg-white green">Niveau I</p>
 							</div>
 							<div class="pregame">
-								<p id='play'>
-									<button gamebutton" id="start" class="g-start inactivebutton" disabled aria-hidden="true"></button>
+								<p id='play' class="g-description">
+									<button id="start" class="g-start inactivebutton" disabled aria-hidden="true"></button>
 								</p>
 								<button  id="instructions" class="g-instructions inactivebutton" disabled aria-hidden="true">
 								</button>
 								<button  id="topscores" class="g-topscores inactivebutton" onclick="openscore();event.preventDefault();" disabled aria-hidden="true"></button>
 								<button  id="infos" class="g-infos inactivebutton" disabled aria-hidden="true"></button>
-								<button  id="statistics" class="g-stats inactivebutton" disabled aria-hidden="true"></button>		
+								<button  id="stats" class="g-stats inactivebutton" disabled aria-hidden="true"></button>		
 							</div>							
 							<div class="how">
 								<ul>
@@ -377,12 +386,12 @@
 							<?php $attempts = array('first','second','third', 'fourth','fifth', 'sixth','seventh', 'eighth','ninth', 'tenth' , 'eleventh', 'twelfth');
 							for($i = 1; $i < 13; $i++) : ?> 
 								<?php if(($i==1) ||($i==7)): ?>
-									<div class="half">
+									<div class="g-half">
 								<?php endif ?>
 									<div class="<?=$i?> gameline" >
 										<label for="<?=$attempts[$i-1]?>"><?=$i?>.</label>
 										<input type="text" class="tentries <?=$attempts[$i-1]?>"  disabled>
-										<button class="game-button details" disabled id="<?=$attempts[$i-1]?>" value="Essai">
+										<button class="js-g-validate game-button details" disabled id="<?=$attempts[$i-1]?>" value="Essai">
 											<img src="img/checkedb.svg" alt="Icone de validation d'une réponse"/>
 										</button>
 										<p class="result" id="<?=$attempts[$i-1]?>try" aria-hidden="true"></p>
@@ -408,8 +417,10 @@
 			</section>
      	</div>
 	</main>
-	<footer class='flexdown'>
-		<div class="foot coords">
+	<footer >
+		<div class="flexdown">	
+
+		<div class="footer-section coords">
 			<ul>
 				<li>
 					<span class="identity">Pierre Smolinski</span>
@@ -427,8 +438,9 @@
 				</li>
 			</ul>
 		</div>
-		<div class="foot contactform" id="contact">
+		<div class="footer-section contactform" id="contact">
 			<hr class="footer-hr">
+			
 			<div class="contact-form">
 				<p class="mail--header">ME CONTACTER</p>
 				<form method="post" action="php/traitb.php">
@@ -439,7 +451,7 @@
 	 			</form>
  			</div>
 		</div>
-		 <script></script> 
+	</div>
 			<audio id="v1">
 	         </audio>
 	         <audio id="v2">		
@@ -472,52 +484,14 @@
 	         		<source src='sound/switch.mp3' type='audio/mp3'>
 	         </audio> 	         	         	         
 	         <div class="loading-bar"></div>
+	         <div class="float-clear"></div>
 	         <div class='licence'>
 	         	<div>Icons made by <a href="http://www.freepik.com"  target="_blank"  rel="noreferrer" title="Freepik">Freepik</a>, <a href="https://www.flaticon.com/authors/smashicons"  target="_blank"  rel="noreferrer" title="Smashicons">Smashicons</a>, <a href="https://www.flaticon.com/authors/twitter"  target="_blank"  rel="noreferrer" title="Twitter">Twitter</a>, <a href="https://www.flaticon.com/authors/smalllikeart"  target="_blank"  rel="noreferrer" title="smalllikeart">smalllikeart</a>, <a href="https://www.flaticon.com/authors/pixel-perfect"  target="_blank"  rel="noreferrer" title="Pixel perfect">Pixel perfect</a>, <a href="https://www.flaticon.com/authors/pixel-buddha"  target="_blank"  rel="noreferrer" title="Pixel Buddha">Pixel Buddha</a>, <a href="https://www.flaticon.com/authors/anton-saputro"  target="_blank"  rel="noreferrer" title="Anton Saputro">Anton Saputro</a>, <a href="https://www.flaticon.com/authors/vectors-market"  target="_blank"  rel="noreferrer" title="Vectors Market">Vectors Market</a>, <a href="https://www.flaticon.com/authors/dave-gandy"  target="_blank"  rel="noreferrer" title="Dave Gandy">Dave Gandy</a>, <a href="https://www.flaticon.com/authors/daniel-bruce"  target="_blank"  rel="noreferrer" title="Daniel Bruce">Daniel Bruce</a> from <a href="https://www.flaticon.com/"  target="_blank"  rel="noreferrer" title="Flaticon">www.flaticon.com</a>,  is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank"  rel="noreferrer">CC 3.0 BY</a></div>
 				<div>Effects sound from <a href="https://www.zapsplat.com" title="Zapslat" target="_blank"  rel="noreferrer">Zapslat.com</a></div>
 			</div>
 	</footer>
-		<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-		<!-- build:js javascript/min.js -->
-
-		<!-- polyfills -->
-		<script src="js/inc/shim/Base64.js"  ></script>
-		<script src="js/inc/shim/Base64binary.js"  ></script>
-		<script src="js/inc/shim/WebAudioAPI.js"  ></script>
-		<!-- midi.js package -->
-		<script src="js/midi/audioDetect.js"  ></script>
-		<script src="js/midi/gm.js"  ></script>
-		<script src="js/midi/loader.js"  ></script>
-		<script src="js/midi/plugin.audiotag.js"  ></script>
-		<script src="js/midi/plugin.webaudio.js"  ></script>
-		<script src="js/midi/plugin.webmidi.js"  ></script>
-		<!-- utils -->
-		<script src="js/util/dom_request_xhr.js"  ></script>
-		<!-- keyboard events : used for the piano - assign keyboard keys to piano keys -->
-		<script src="js/mousetrap.min.js"></script>
-		<!-- js media queries : display the different sizes of pianos for different screen sizes -->
-		<script src="js/enquire.min.js"></script>
-		<!-- for some animations -->
-		<script src="js/anime.min.js"></script>
-		<!-- helper functions -->
-		<script src="js/helper.js"></script>
-		<!-- the kalimba -->
-		<script src="js/kalimba.js"></script>
-		<!-- main script -->
-		<script src="js/main.js"></script>
-
-		<script src="javascript/utilities.js"></script>
-		<script src="javascript/gamelistener.js"></script>
-		<script src="javascript/gamesuite.js"></script>
-
-		<script src="javascript/base.js"></script>
-		<script src="folder-js/anime.min.js"></script>
-		<script src="folder-js/charming.min.js"></script>
-		<script src="folder-js/main.js"></script>
-
-		<script src="works-js/app.js"></script>
-		<script src="works-js/polyfill.js"></script>
-		<!-- endbuild -->
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<script src="javascript/min.js"></script>
 		<script>
 		(function() {
 			new DurgaFx(document.querySelectorAll('.content--durga .folder--durga')[0]);

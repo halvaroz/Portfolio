@@ -5,16 +5,17 @@ document.addEventListener("DOMContentLoaded", function(event)
 
 	setRustine();
 
-	window.addEventListener('resize',function(){
+	window.addEventListener('resize',debounce(function(){
 			setRustine();
-		});
 
-/*Au clic sur l'icone son - sous la nav à gauche*/
-	$('#sound').click(function() {
+		},1000));
+
+/*Au clic sur l'icone son - sous la nav à droite*/
+	$('.sound-button').click(function() {
 	 	silence = !silence;
 	 	let position = "";
 	 	silence ? position="off" : position="on";
-	 	$('#sound').html(`<img src="img/audio-${position}.png" alt="" />`);
+	 	$('.sound-button').html(`<img src="img/audio-${position}.png" alt="" />`);
 
 	 	if (!soundEverActivated) {
 	 		/**
@@ -41,12 +42,14 @@ document.addEventListener("DOMContentLoaded", function(event)
 				}
 			});
 		}
+
 	soundEverActivated = true;
+	
 	init();
-
-
 	 	}
  	});
+
+ 	$('.sound-button').one('click', zoom);
 
 
 /*Jeu - Au clic sur le bouton power*/
@@ -72,10 +75,10 @@ document.addEventListener("DOMContentLoaded", function(event)
 							'statistics',
 							'comments']);
 	    		
-	    	$('#effect').toggleClass('voile');
-	    	$('#effect2').toggleClass('voile');
-	    	$('#rustine').toggleClass('shadow');
-	    	$('#rustine').html('<p class="welcome">Bienvenue !</p>');
+	    	$('#js-g-header').toggleClass('shadow');
+	    	$('#js-g-body').toggleClass('shadow');
+	    	$('#js-g-rustine').toggleClass('shadow');
+	    	$('#js-g-rustine').html('<p class="welcome">Bienvenue !</p>');
 
 	    	gamestate=1;
 	    	document.body.className = "";
@@ -97,11 +100,10 @@ document.addEventListener("DOMContentLoaded", function(event)
 	    	for (let i=0;i<13;i++){
 				sleepingTry(i);
 			}
-
-	    	$('#effect').toggleClass('voile');
-	    	$('#effect2').toggleClass('voile');
-	    	$('#rustine').toggleClass('shadow');
-	    	$('#rustine').empty();
+	    	$('#js-g-header').toggleClass('shadow');
+	    	$('#js-g-body').toggleClass('shadow');
+	    	$('#js-g-rustine').toggleClass('shadow');
+	    	$('#js-g-rustine').empty();
 	    	$('.tentries').val('');
 	    	$('.tentries').attr('disabled','true');
 
@@ -181,7 +183,6 @@ document.addEventListener("DOMContentLoaded", function(event)
 	        if(window.innerWidth<480){
 	            fixedElementHeight=308;
         }
-
 			$('html, body')
                 .stop()
                 .animate({
@@ -191,26 +192,11 @@ document.addEventListener("DOMContentLoaded", function(event)
         };
     	setAnchor()
     	currentAnchor = $anchor.attr('id')
-    	
     	}
-
     
     });
 
-    let miniatures = document.getElementsByClassName('miniatures');
-
-    for (let i=1; i<=miniatures.length; i++) {
-    	$(`#img${i}`).on('click',zoom);
-    }
-    console.log('here')
-
 });
-
-
-
-
-
- 
 
 
 

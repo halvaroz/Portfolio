@@ -8,6 +8,30 @@
  * Copyright 2016, Codrops
  * http://www.codrops.com
  */
+
+let keyDownActive = false
+
+let nextKeyPress = true
+let X = 0.137
+
+function setHandleNextKeypressTrue() {
+    handleNextKeypress = true;
+}
+
+function setHandleNextKeypressTrueAfterDelay(delay) {
+    setTimeout(setHandleNextKeypressTrue, delay);
+}
+
+function testing (e){
+	if(handleNextKeypress) {
+        handleKeyDown(e)
+        handleNextKeypress = false;
+        setHandleNextKeypressTrueAfterDelay(X * 1000);
+    }
+
+}
+
+
 ;(function(window) {
 	/**
 	 * Kalimba obj. Tuned to CMaj (C4..C5)
@@ -87,7 +111,7 @@
 			}
 		});
 
-		let firstSection = document.querySelector('.a_content');
+		
 
 			function handleKeyDown(e){
 			
@@ -95,8 +119,6 @@
 					case 83:
 						let tineA = self.tines[0]
 						let noteA = self._getNote(tineA);
-						console.log(noteA)
-				console.log(tineA)
 						self._play(noteA, 'on', tineA );
 						break;
 					case 68:
@@ -184,21 +206,30 @@
 				}
 				
 			}
-			
 
-			window.addEventListener('keydown', handleKeyDown)
-			window.addEventListener('keyup', handleKeyUp)
+		
+			
+			let firstSection = document.querySelector('.a_content');
+
+
+			firstSection.addEventListener('click', function(ev){
+				if (!keyDownActive){
+					window.addEventListener('keydown', handleKeyDown)
+					keyDownActive = true
+				}
+			})
 
 			firstSection.addEventListener('mouseenter', function(ev){
-				window.addEventListener('keydown', handleKeyDown)
-
-
+				if (!keyDownActive){
+					window.addEventListener('keydown', handleKeyDown)
+					keyDownActive = true
+				}
 			})
 
 			firstSection.addEventListener('mouseleave', function(ev){
 				window.removeEventListener('keydown', handleKeyDown)
-	
-				});
+				keyDownActive = false
+			});
 
 		
 		if( !isMobile ) {

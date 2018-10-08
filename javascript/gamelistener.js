@@ -130,7 +130,7 @@ function setGame(){
 
 
 /*À la validation d'une proposition*/
-	$('.game').on('click',onClickExecute);
+	$('.js-g-validate').on('click',onClickExecute);
 	
 	
 }

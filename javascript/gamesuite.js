@@ -122,7 +122,7 @@ function specifyName(){
 		data: {'name': name},
 		success:function(data){
 
-			$('#wellmessage').html(data);
+			$('#js-g-congrats').html(data);
 
 			if (data.includes('caractères')){
 				$('#addname').on('click',specifyName);

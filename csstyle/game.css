@@ -1,3 +1,4 @@
+/*V*/
 .game-header {
 	background-color: rgba(18,98,142,0.8);
 	padding: 1rem 0;
@@ -27,20 +28,12 @@
 	vertical-align: top;
 }
 
-#effect2.voile{	border-radius: 3rem 3rem 0 0;}
-
-.voile {
-	z-index:50;
-	background-color: black;
-	width: 100%;
+.g-title{	border-radius: 3rem 3rem 0 0;
 	height: 100%;
-
-	opacity: 0.3;
-	transition: opacity 3.8s;
-	transition-timing-function: ease-in;
+	width: 100%;
 }
 
-#effect {	border-radius: 0 0 3rem 3rem;}
+.g-main {	border-radius: 0 0 3rem 3rem;}
 
 .rustine {
 	display: inline-block;
@@ -48,37 +41,32 @@
 	text-align: center;
 	font-weight: bold;
 	font-size: 3rem;
+	height: 76px;
 	/*tentative vaine*/
 	display: table-cell;
 	vertical-align: middle;  
+
+	margin-top: 	0px;
+}
+
+.shadow {
+	z-index: 50;
+	background-color: black;
+	opacity: 0.3;
+	transition: opacity 3.8s;
+	transition-timing-function: ease-in;
+
 }
 
 .g-power {margin-bottom: -1px;}
-
-.shadow {
-	background-color: black;
-	z-index: 50;
-	opacity: 0.3;
-	height: 80px;
-
-	display: inline-block;
-
-	margin-bottom: -8px; 
-	margin-top: 0;
-
-	transition: opacity 3.8s;
-	transition-timing-function: ease-in;
-}
 
 .game {
 	color: white;
  	background-color: #000;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='126' height='84' viewBox='0 0 126 84'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%2310cff7' fill-opacity='0.4'%3E%3Cpath d='M126 83v1H0v-2h40V42H0v-2h40V0h2v40h40V0h2v40h40V0h2v83zm-2-1V42H84v40h40zM82 42H42v40h40V42zm-50-6a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm96 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm-42 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm30-12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM20 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm12 24a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM8 78a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm12 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm54 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM50 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM50 78a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm54-12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm12 12a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM92 54a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM92 78a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm24-42a4 4 0 1 1 0-8 4 4 0 0 1 0 8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-	
 	font-family: QuickSand, Arial, sans-serif;
 	font-size: 2.2rem;
 	border-radius: 3rem;
-	margin-bottom: 1.4rem;
 	padding-bottom: 0.1rem;
 }
 
@@ -116,7 +104,7 @@
 
 .game .activebutton:active:after {  opacity: 0;}
 
-#light, #lvlchange, #start,#instructions,#topscores,#infos,#statistics,#help,#newgame,#giveup,#comments {
+.g-light, .g-difficulty, .g-start,.g-instructions,.g-topscores,.g-infos,.g-stats,.g-help,.g-newgame,.g-giveup,.g-comments {
 	width: 80px;
 	height: 75px;
 	background-repeat: no-repeat;
@@ -133,7 +121,7 @@
 	z-index: 30;
 } 
 
-.g-levelchoice {	background-position: -262px -10px;} 
+.g-difficulty {	background-position: -262px -10px;} 
 .g-start {	background-position: -10px -10px ;}
 .g-instructions {	background-position: -10px -262px;}
 .g-topscores {	background-position: -178px -10px;}
@@ -190,13 +178,13 @@
 	background-color: rgb(55,55,55);
 }
 
-#current {
+.current {
 	color: black;
 	background-color: white;
 	border: 1px solid #a76a14;
 }
 
-#current .tentries {
+.current .tentries {
 	background-color: black;
 	color:white;
 }
@@ -210,7 +198,7 @@
 
 .pregame button {	text-align: center;}
 
- #play, #clue { margin: 0;}
+.g-description { margin: 0;}
 
 .center {
 	display: block;
@@ -236,15 +224,17 @@
 
 span.bg-white {	padding: 0.5rem;}
 
-#wellmessage p, #wellmessage span {
+.congrats p, .congrats span {
 	display: block;
 }
+
+.congrats p {	padding: 1rem;}
 
 .firsts {	background-color: #fc852e;}
 
 .seconds {	background-color: #ebba16;}
 
-#lvl {
+.lvl-display {
 	display: inline-block;
 	padding: 17px;
 	margin-bottom: 0;
